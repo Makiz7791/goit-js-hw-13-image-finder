@@ -12,10 +12,10 @@ const queryStringParam = {
   page: 1,
   LINK: 'https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=',
   resetPage() {
-    this.page = 1;
+    this.page = 2;
   },
   pageIncrement() {
-    this.page += 1;
+    this.page += 2;
   },
 };
 
