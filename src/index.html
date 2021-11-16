@@ -6,16 +6,44 @@
     <title>Заголовок страницы</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
-      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
       crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
     />
   </head>
   <body>
-    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-    <include src="./partials/example.html"></include>
+    <section class="application">
+      <div class="container container__application">
+        <form class="search-form" id="search-form">
+          <label class="input-container">
+            <input
+              class="search-form__input"
+              type="text"
+              name="query"
+              autocomplete="off"
+              placeholder="Find photo"
+            />
+            <span class="search-form__spinner"></span>
+          </label>
+          <button class="search-form__btn" type="submit" data-btn="search">Search</button>
+        </form>
+        <ul class="gallery js-gallery list is-hidden"></ul>
+        <button type="button" class="gallery__btn is-hidden" data-btn="Yet ..." disabled>
+          Yet ...
+        </button>
+        <div class="loader-backdrop js-loader-backdrop is-hidden">
+          <div class="gallery__spinner"></div>
+        </div>
 
-    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
-    <script src="./index.js"></script>
+        <script src="./index.js"></script>
+      </div>
+    </section>
   </body>
 </html>
