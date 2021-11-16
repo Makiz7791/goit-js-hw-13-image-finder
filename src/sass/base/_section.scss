@@ -1,0 +1,36 @@
+// 0-479 responsive mobile container
+.container {
+    width: 100%;
+  }
+  
+  .container__application {
+    padding: 100px 0 30px 0;
+  }
+  
+  @media screen and (max-width: 479px) {
+    .container__application {
+      padding: 100px 0 0 0;
+    }
+  }
+  
+  // 480-767 adaptive mobile container
+  @media screen and (min-width: 480px) {
+    .container {
+      width: 450px;
+      margin: 0 auto;
+    }
+  }
+  
+  // 768-1199 adaptive tablet container
+  @media screen and (min-width: 768px) {
+    .container {
+      width: 740px;
+    }
+  }
+  
+  // 1200+ adaptive desktop container
+  @media screen and (min-width: 1200px) {
+    .container {
+      width: 1100px;
+    }
+  }

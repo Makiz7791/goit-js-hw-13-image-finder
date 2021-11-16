@@ -1,1 +1,56 @@
-@import './example';
+@import './spinner';
+@import './components/loader-backdrop';
+@import './base/section';
+@import './components/form';
+@import './components/gallery';
+
+:root {
+  --input-bg: #ded7f0;
+  --loader-color: rgba(222, 215, 240, 0.6);
+  --btn-color: #514277;
+  --placeholder: #887ea0;
+  --active-btn-color: #3a2f55;
+  --main-text-color: #4a4652;
+  --stats-bgc: rgba(29, 29, 29, 0.7);
+}
+
+body {
+  font-family: Roboto;
+}
+
+.is-lock {
+  overflow: hidden;
+}
+
+body::after {
+  background-image: url(../images/iron.jpg);
+  content: '';
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-repeat: repeat;
+  background-position: top;
+  background-size: 800px;
+}
+
+p,
+ul,
+li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
+.list {
+  list-style: none;
+}
+
+button.is-hidden {
+  display: none;
+}
